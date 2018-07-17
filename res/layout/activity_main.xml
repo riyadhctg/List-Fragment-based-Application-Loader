@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/black"
+    >
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="30dp"
+        android:paddingRight="30dp"
+        android:gravity="right"
+        >
+
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/menu_btn"
+            android:src="@mipmap/settings_button"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:gravity = "bottom"
+        >
+    <ImageButton
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/dialer"
+        android:src="@mipmap/dialer_round"
+        android:visibility="visible"
+        android:layout_toLeftOf="@id/sms"
+        android:gravity = "bottom"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/sms"
+        android:src="@mipmap/sms_round"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:gravity = "bottom"
+        android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:id="@+id/add_button"
+            android:src="@mipmap/addbtn_round"
+            android:visibility="visible"
+            android:layout_toRightOf="@id/sms"
+            android:gravity = "bottom"
+            android:background="@android:color/transparent"/>
+
+
+    <ImageButton
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/custom_btn"
+        android:src="@mipmap/ic_launcher_round"
+        android:visibility="gone"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:padding="15dp"
+        android:layout_toRightOf="@id/sms"
+        android:gravity = "bottom"
+        android:background="@drawable/custom_button_corners"/>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/fragment_header"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:text="Tap an app to add it to Home"
+            />
+
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.commongivinglabs.terriblydumblauncherpro.AppListFragment"
+            android:id="@+id/apps_grid" />
+
+
+        <Button
+            android:id="@+id/close_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Cancel"
+            android:layout_marginBottom="50dp"/>
+
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
